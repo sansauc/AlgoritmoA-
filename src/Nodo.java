@@ -5,7 +5,7 @@ public class Nodo {
     private int coordenadaY;
     private int coordenadaX;
     private int id;
-    private int G;
+    private float G;
     private float F;
     private float H; //Valor de la Eurísitica
     private Nodo padre;
@@ -16,7 +16,7 @@ public class Nodo {
     }
 
     //El nodo inicial no tiene nodo padre
-    public Nodo (int id, int x, int y, int g, float h, float f, List<Nodo>vecinos){
+    public Nodo (int id, int x, int y, float g, float h, float f, List<Nodo>vecinos){
         this.id = id;
         this.coordenadaX = x;
         this.coordenadaY = y;
@@ -26,7 +26,7 @@ public class Nodo {
         this.vecinos = vecinos;
     }
     
-    public Nodo (int id, int x, int y, int g, float h, float f, Nodo padre, List<Nodo>vecinos){
+    public Nodo (int id, int x, int y, float g, float h, float f, Nodo padre, List<Nodo>vecinos){
         this.id = id;
         this.coordenadaX = x;
         this.coordenadaY = y;
@@ -62,11 +62,11 @@ public class Nodo {
     } 
 
 
-    public int getG(){
+    public float getG(){
         return this.G;
     }
 
-    public void setG(int costoSalto){
+    public void setG(float costoSalto){
         this.G = costoSalto;        
     }
 

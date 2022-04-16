@@ -9,8 +9,6 @@ public class Controlador {
         /**Esto se haria con la logica de interacción de la interfaz, pero para provar podemos cargar 6, 7 
          * nodos a manopla por codigo cargar cuantos nodos se van a querer tener determinar nodo inicial y 
          * nodo final **/
-
-
     }
 
     public List<costoSalto> calcularCostoDeLosSaltos(){
@@ -61,15 +59,15 @@ public class Controlador {
     }
 
     public void calcularCostoDePasoAlNodo (Nodo nodoActual, Nodo nodoVecino){
-       float gAux = this.getCostoSalto(nodoActual, nodoVecino); // obtiene el valor del salto
-        if (nodo.getF() > (gAux+nodoActual.getG()+nodoVecino.getH())){ //el nuevo valor de g se calcula como el costo de salto al nodo vecino, mas el valor de G del nodo actual, mas el valor de la heuritica del nodo vecino
+       float gAux = this.getCostoSaltos(nodoActual, nodoVecino); // obtiene el valor del salto
+        if (nodoVecino.getF() > (gAux+nodoActual.getG()+nodoVecino.getH())){ //el nuevo valor de g se calcula como el costo de salto al nodo vecino, mas el valor de G del nodo actual, mas el valor de la heuritica del nodo vecino
             
             //Actualizamos los valores para el nodo vecinos
             //significa que el nuevo F es mejor, por lo tanto actualizamos F y G en el nodo Vecino
-            nodo.setG(gAux+nodoActual.getG());
-            nodo.setF(gAux+nodoActual.getG()+nodoVecino.getH())
+            nodoVecino.setG(gAux+nodoActual.getG());
+            nodoVecino.setF(gAux+nodoActual.getG()+nodoVecino.getH())
             //Actualizamos el padre del nodoVecino para indicar cual es su nuevo padre con un camino mas optimo
-            nodo.setPadre(nodoActual);
+            nodoVecino.setPadre(nodoActual);
         }
     }
 
