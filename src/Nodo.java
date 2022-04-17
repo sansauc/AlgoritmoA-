@@ -9,7 +9,7 @@ public class Nodo {
     private float F;
     private float H; //Valor de la Eurísitica
     private Nodo padre;
-    private List<Nodo> vecinos;   
+    private List<Nodo> vecinos= new ArrayList<Nodo>();   
 
     public Nodo(){
         this.vecinos = new ArrayList<Nodo>();        
@@ -36,6 +36,13 @@ public class Nodo {
         this.padre = padre;
         this.vecinos = vecinos;
     }
+
+    public Nodo (int id, int x, int y){
+        this.id = id;
+        this.coordenadaX = x;
+        this.coordenadaY = y;
+    }
+
 
     public int getId(){
         return this.id;
