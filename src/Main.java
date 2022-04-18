@@ -30,12 +30,12 @@ public class Main {
 
         while (nodoFinalEncontrado == false){
             nodoActual = controlador.obtenerNodoConMenorF(nodosAbiertos);
-            camino.add(nodoActual);
             nodosAbiertos.remove(nodoActual);
             nodosCerrados.add(nodoActual);
             if (nodoActual == nodoFinal){
                 nodoFinal.setPadre(nodoViejo);
                 nodoFinalEncontrado = true;
+                camino= controlador.obtenerCamino(nodoFinal);
                 break; //llegamos al nodo final, por ende, salimos del bucle
             }
             nodoViejo=nodoActual;

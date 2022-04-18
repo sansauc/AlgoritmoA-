@@ -3,5 +3,12 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
-    ]
+    ],
+    "liveshare.accessibility.accessibilityFeaturesEnabled": true,
+    "liveshare.allowGuestDebugControl": true,
+    "liveshare.allowGuestTaskControl": true,
+    "liveshare.alwaysFollowHost": true,
+    "liveshare.diagnosticLogging": true,
+    "liveshare.diagnosticMode": true,
+    "liveshare.guestApprovalRequired": true
 }
